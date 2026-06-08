@@ -1,0 +1,29 @@
+<h2>Tareas cercanas</h2>
+
+<div class="map-wrapper">
+
+  <div id="mapa-informatico"></div>
+
+</div>
+
+<ul class="lista-tareas">
+
+  <li *ngFor="let t of tareas">
+
+    <div>
+
+      <strong>{{ t.nombre }}</strong>
+
+      <br>
+
+      <small>{{ t.estado }}</small>
+
+    </div>
+
+    <button (click)="aceptarTarea(t)">
+      Aceptar
+    </button>
+
+  </li>
+
+</ul>

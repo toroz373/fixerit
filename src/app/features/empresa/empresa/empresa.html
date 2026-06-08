@@ -1,0 +1,99 @@
+<h2 class="titulo">
+  Panel de Empresa
+</h2>
+
+<!-- CARD -->
+
+<div class="card">
+
+  <h3>
+    Añadir Informático
+  </h3>
+
+  <label>Nombre:</label>
+
+  <input
+    type="text"
+    [(ngModel)]="nuevoInformatico.nombre"
+  >
+
+  <label>Email:</label>
+
+  <input
+    type="email"
+    [(ngModel)]="nuevoInformatico.email"
+  >
+
+  <button (click)="crearInformatico()">
+    Añadir
+  </button>
+
+</div>
+
+<!-- INFORMÁTICOS -->
+
+<h3 class="subtitulo">
+  Lista de Informáticos
+</h3>
+
+<ul class="lista-informaticos">
+
+  <li *ngFor="let i of informaticos">
+
+    <strong>{{ i.nombre }}</strong>
+
+    <span>{{ i.email }}</span>
+
+  </li>
+
+</ul>
+
+<!-- TABLA -->
+
+<h3 class="subtitulo">
+  Tareas registradas
+</h3>
+
+<div class="tabla-wrapper">
+
+  <table>
+
+    <thead>
+
+      <tr>
+
+        <th>ID</th>
+
+        <th>Tarea</th>
+
+        <th>Usuario</th>
+
+        <th>Informático</th>
+
+        <th>Estado</th>
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor="let t of tareas">
+
+        <td>{{ t.id_tarea }}</td>
+
+        <td>{{ t.nombre }}</td>
+
+        <td>{{ t.usuario }}</td>
+
+        <td>{{ t.informatico }}</td>
+
+        <td>{{ t.estado }}</td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>

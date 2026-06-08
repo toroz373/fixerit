@@ -1,0 +1,38 @@
+<h2>Crear nueva tarea</h2>
+
+<div class="map-wrapper">
+  <div id="mapa-usuario"></div>
+</div>
+
+<div class="formulario">
+
+  <label>Nombre de la tarea:</label>
+  <input
+    type="text"
+    [(ngModel)]="tarea.nombre"
+  >
+
+  <label>Descripción:</label>
+  <textarea
+    [(ngModel)]="tarea.descripcion"
+  ></textarea>
+
+  <label>Latitud:</label>
+  <input
+    type="text"
+    [value]="latitud"
+    disabled
+  >
+
+  <label>Longitud:</label>
+  <input
+    type="text"
+    [value]="longitud"
+    disabled
+  >
+
+  <button (click)="crearTarea()">
+    Crear tarea
+  </button>
+
+</div>
